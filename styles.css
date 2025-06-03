@@ -23,7 +23,6 @@ body {
   color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
-  width: 100%;
 }
 
 .main-header button:hover {
@@ -38,6 +37,7 @@ body {
 .banner img {
   width: 100%;
   display: block;
+
 }
 
 .banner button {
@@ -59,20 +59,22 @@ body {
 .block-1 {
   text-align: left;
   font-family: "Verdana", sans-serif;
+  max-width: max-content;
   width: 100%;
-}
+  padding-top: 2rem;
+    }
 
 .heading1 {
-  font-size: 3rem;
-  margin: 60px 0;
+  font-size: 64px;
+  margin: 20px 0;
   font-weight: 500;
 }
 
 .heading2 {
-  font-size: 2rem;
+  font-size: 48px;
   color: #4CAF50;
-  margin: 36px 0;
-  font-weight: 600;
+  margin: 16px 0;
+  font-weight: 500;
 }
 
 .block-1-1 {
@@ -80,15 +82,18 @@ body {
   max-width: 800px;
   margin: auto;
   padding-left: 20px;
-    padding-right: 32px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+  padding-right: 32px;
+  padding-top: 12px;
+  padding-bottom: 32px;
 }
 
 .block-1-1 p {
   line-height: 150%;
   text-align: left;
-  font-size: 18px;
+  font-size: 15px;
+}
+.block-1-1 i {
+  font-size: 20px;
 }
 
 .block-1-1 p span {
@@ -104,23 +109,29 @@ body {
   justify-content: center;
   gap: 10px;
   text-align: center;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 
-.block-1-2 button {
-  width: 90%;
+.block-1-1 button {
+  width: 100%;
   height: 2.5em;
   background-color: white;
   border: none;
   cursor: pointer;
+  margin: 5% 0 auto;
+  font-size: 1rem;
+
 }
 
-.block-1-2 button:hover {
+.block-1-1 button:hover {
   background-color: rgb(186, 186, 186);
 }
 
 .block-1-2 img {
   max-width: 65%;
+}
+.block-2 img{
+  display: none;
 }
 
 .block-2 {
@@ -129,38 +140,35 @@ body {
   width: 100%;
   background-color: rgb(235, 232, 227);
   padding-bottom: 120px;
-}
-
-.block-2-1 {
   width: 100%;
   max-width: 800px;
   margin: auto;
    padding-left: 20px;
     padding-right: 32px;
-    padding-top: 32px;
+    padding-top: 12px;
     padding-bottom: 32px;
 }
 
-.block-2-1 .heading1 {
+.block-2 .heading1 {
   font-size: 3rem;
-  margin: 60px 0;
+  margin: 10px 0;
   font-weight: 500;
 }
 
-.block-2-1 .heading2 {
+.block-2 .heading2 {
   font-size: 2rem;
   color: #ec333c;
-  margin: 36px 0;
+  margin: 16px 0;
   font-weight: 600;
 }
 
-.block-2-1 p {
+.block-2 p {
   line-height: 150%;
   text-align: left;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.block-2-1 p span {
+.block-2 p span {
   line-height: 130%;
   text-align: left;
   font-size: 26px;
@@ -211,7 +219,7 @@ body {
 }
 
 .block-4 {
-  margin-top: 120px;
+  margin-top: 90px;
 }
 
 .block-4-1 {
@@ -220,14 +228,14 @@ body {
 }
 
 .block-4-1 .heading1 {
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 0;
   font-weight: 600;
 }
 
 .block-4-1 p {
   padding-top: 2%;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .block-4-2 {
@@ -306,3 +314,119 @@ body {
   cursor: pointer;
 }
 
+
+@media (min-width: 1024px) {
+  body{
+    background-color: black;
+  }
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;  
+    background-color: white;
+
+  }
+
+
+  .block-1,
+  .block-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;  
+    align-items: center;
+    width: 100%;
+    max-width: max-content;
+  }
+
+  
+  .block-1-1 {
+    flex: 1;
+    padding-right: 20px;
+    width: 100%;
+    max-width: max-content;
+  }
+  .block-1-1 button{
+    max-width: 220px;
+  }
+
+  .block-1-2 {
+    flex-shrink: 0;
+    width: auto;
+    max-width: 500px;  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .block-1-2 img {
+    width: 100%;
+    height: auto;
+    margin-left: 30% ;
+  }
+
+  .block-2-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+   
+  .block-2 {
+    display: flex;
+    align-items: center;  
+    gap: 40px;
+    padding: 60px 40px;
+
+  }
+
+  .block-2-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;
+     width: 60%;  
+      max-width: 300px;  
+      height: auto;
+      opacity: 0.5;
+  }
+
+  .block-2-heading {
+    flex: 1;
+    padding: 0 10px;
+    
+  }
+
+  .block-1-1,
+  .block-1-2,
+  .block-2-heading,
+  .block-2-img {
+    flex: 1;
+  }
+
+  .block-3-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+  }
+
+  .block-4-2 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .block-4-2-1 {
+    flex: 1;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .banner-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+}
